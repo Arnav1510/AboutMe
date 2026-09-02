@@ -1,0 +1,34 @@
+body {
+    background: linear-gradient(to bottom, red, purple);
+    background-attachment: fixed;
+    color: black;  
+}
+h3 {
+    color: white;
+    font: bold;
+}
+img {
+    border: 1px dotted blue;
+    height: 500px;
+    width: 800px;
+}
+.txt:hover {
+    color: lightskyblue;
+}
+.txt2:hover {
+     color: lightskyblue;
+}
+.txt::after{
+    animation: 3s linear 0s infinite running mytxt;
+}
+.txt2::after{
+    animation: 3s linear 0s infinite running mytxt;
+}
+@keyframes mytxt {
+    0%{color: red;}
+    20%{color: orange;}
+    40%{color: yellow;}
+    60%{color: green;}
+    80%{color: blue;}
+    100%{color: red;}
+}

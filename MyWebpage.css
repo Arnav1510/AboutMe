@@ -1,0 +1,60 @@
+#icon1 {
+font-size: 80px;
+color: red;
+}
+#icon1:hover {
+    animation: 3s linear 0s infinite running myiCON;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    font-size: 15px;
+    border-radius: 12px;
+    color: aqua;
+    background-color: black;
+}
+button:hover {
+    animation: 3s linear 0s infinite running mybtn;
+}
+button::after{
+    color: green;
+    background-color: blueviolet;
+}
+body{
+   background: #1A2980;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: black;   
+}
+p {
+    font-size: 20px;
+}
+@keyframes myiCON {
+    0%, 100%{transform: scale(0.5,0.5);}
+    50%{transform: scale(1,1);}
+    0%{color: red;}
+    20%{color: orange;}
+    40%{color: yellow;}
+    60%{color: green;}
+    80%{color: blue;}
+    100%{color: red;}
+}
+@keyframes mybtn {
+    0%{color: red;}
+    20%{color: orange;}
+    40%{color: yellow;}
+    60%{color: green;}
+    80%{color: blue;}
+    100%{color: red;}
+    0%{box-shadow: 0px 0px 50px red;}
+    20%{box-shadow: 0px 0px 50px orange;}
+    40%{box-shadow: 0px 0px 50px yellow;}
+    60%{box-shadow: 0px 0px 50px green;}
+    80%{box-shadow: 0px 0px 50px blue;}
+    100%{box-shadow: 0px 0px 50px red;}
+}

@@ -1,0 +1,27 @@
+body {
+  background: #1A2980;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: black;   
+}
+.cars{
+    align-items: center;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 12px;
+}
+.cars:hover {
+    animation: 3s linear 0s infinite running mycarbtn;
+}
+@keyframes mycarbtn {
+    0%{color: red;}
+    20%{color: orange;}
+    40%{color: yellow;}
+    60%{color: green;}
+    80%{color: blue;}
+    100%{color: red;}
+    0%{box-shadow: 0px 0px 50px white;}
+    50%{box-shadow: 0px 0px 50px black;}
+    100%{box-shadow: 0px 0px 50px white;}
+}
