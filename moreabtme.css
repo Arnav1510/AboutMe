@@ -2,11 +2,10 @@ body {
   background: #1A2980;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    margin: 0;
     color: black;   
 }
 .cars{
-    align-items: center;
     background-color: black;
     color: aliceblue;
     border-radius: 12px;
@@ -24,4 +23,47 @@ background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, F
     0%{box-shadow: 0px 0px 50px white;}
     50%{box-shadow: 0px 0px 50px black;}
     100%{box-shadow: 0px 0px 50px white;}
+}
+.n {
+    display:block;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 10, 0.2);
+    margin: 0;
+}
+.notes {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.snote{
+    background-color: rgb(19, 19, 197);
+    width: 250px;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 12px;
+
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
+.snote h2 {
+    color: aqua;
+    margin-top: 0;
+}
+.snote p {
+    color: rgb(145, 244, 244);
+    font-size: 16px;
+    line-height: 1.5;
+}
+.snote {
+    transition: transform 1.3s ease; box-shadow: 0.3 s ease;
+}
+.snote:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
 }
