@@ -9,7 +9,9 @@ color: red;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
+
 
 .btn {
     font-size: 15px;
@@ -30,31 +32,84 @@ background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);  /* Chrome 10-2
 background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     color: black;   
+    margin: 0;
+    padding: 10px;
 }
 p {
     font-size: 20px;
 }
 @keyframes myiCON {
-    0%, 100%{transform: scale(0.5,0.5);}
-    50%{transform: scale(1,1);}
-    0%{color: red;}
-    20%{color: orange;}
-    40%{color: yellow;}
-    60%{color: green;}
-    80%{color: blue;}
-    100%{color: red;}
+    0%, 100% { transform: scale(0.5); color: red; }
+    20% { color: orange; }
+    40% { color: yellow; }
+    50% { transform: scale(1); }
+    60% { color: green; }
+    80% { color: blue; }
 }
 @keyframes mybtn {
-    0%{color: red;}
-    20%{color: orange;}
-    40%{color: yellow;}
-    60%{color: green;}
-    80%{color: blue;}
-    100%{color: red;}
-    0%{box-shadow: 0px 0px 50px red;}
-    20%{box-shadow: 0px 0px 50px orange;}
-    40%{box-shadow: 0px 0px 50px yellow;}
-    60%{box-shadow: 0px 0px 50px green;}
-    80%{box-shadow: 0px 0px 50px blue;}
-    100%{box-shadow: 0px 0px 50px red;}
+    0%   { color: red;    box-shadow: 0 0 50px red; }
+    20%  { color: orange; box-shadow: 0 0 50px orange; }
+    40%  { color: yellow; box-shadow: 0 0 50px yellow; }
+    60%  { color: green;  box-shadow: 0 0 50px green; }
+    80%  { color: blue;   box-shadow: 0 0 50px blue; }
+    100% { color: red;    box-shadow: 0 0 50px red; }
+}
+
+@media (max-width: 600px) {
+    #icon1 {
+        font-size: 60px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}
+.tnote {
+    display: block;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 10, 0.2);
+    margin: 0;
+}
+.notes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.note {
+    background-color: rgb(19, 19, 197);
+    width: 250px;
+    padding: 20px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    text-align: center;
+    transition: transform 1.3s ease, box-shadow 0.3s ease;
+}
+.note p {
+    color: rgb(145, 244, 244);
+    font-size: 16px;
+    line-height: 1.5;
+}
+.note {
+    transition: transform 1.3s ease, box-shadow 0.3s ease;
+}
+.note:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
 }
