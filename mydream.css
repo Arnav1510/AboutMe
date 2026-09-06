@@ -7,7 +7,7 @@ body {
     color: black;  
 }
 h3 {
-    color: rgb(5, 5, 5);
+    color: rgb(145, 244, 244);
     font-weight: bold;
 }
 a {
@@ -40,8 +40,8 @@ img {
     100%{color: red;}
 }
 .mark {
-    background-color: rgb(217, 231, 236);
-    border-radius: 8px;
+    background-color: rgb(75, 187, 228);
+    border-radius: 4px;
     color: black;
 }
 .notes {
@@ -71,7 +71,7 @@ img {
     transition: transform 1.3s ease, box-shadow 0.3s ease;
 }
 .note:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
 }
 .tnote {
