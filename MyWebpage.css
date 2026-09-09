@@ -112,10 +112,47 @@ p {
 }
 .note:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 25px #26D0CE;
 }
 .note .p1 {
     color: rgb(145, 244, 244);
     font-size: 28px;
     line-height: 1.5;
+}
+.mypic {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mypic img {
+    width: 80%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 40%;
+    animation: photoGlow 2s infinite;
+}
+
+.somenotes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px;
+}
+@media (max-width: 700px) {
+    .somenotes{
+        flex-direction: column;
+    }
+}
+@keyframes photoGlow {
+    0%, 100% {
+        box-shadow: 0 0 10px #26D0CE;
+    }
+
+    50% {
+        box-shadow: 0 0 30px #26D0CE;
+    }
 }
