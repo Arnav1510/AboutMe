@@ -1,10 +1,12 @@
 #icon1 {
     color: red;
     font-size: 100px;
+    transition: transform 1.3s ease;
 }
 
 #icon1:hover {
     animation: 3s linear 0s infinite running myiCON;
+    transform: translateY(-10px), scale(1.5);
 }
 .container {
     display: flex;
@@ -40,10 +42,11 @@ p {
     font-size: 20px;
 }
 @keyframes myiCON {
-    0%, 100% { transform: scale(0.5); color: red; }
+    20% {transform: translateY(-10px);}
+    80%, 20% {transform: translateY(-10px);}
+    0%, 100% { color: red; }
     20% { color: orange; }
     40% { color: yellow; }
-    50% { transform: scale(1); }
     60% { color: green; }
     80% { color: blue; }
 }
