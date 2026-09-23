@@ -159,3 +159,12 @@ p {
         box-shadow: 0 0 30px #26D0CE;
     }
 }
+#proj {
+    font-size: 28px;
+    border-radius: 12px;
+    background-color: grey;
+}
+#htag {
+    color:#0ea3a0;
+    font-size: 24px;
+}
