@@ -168,3 +168,15 @@ p {
     color:#0ea3a0;
     font-size: 24px;
 }
+.tnote1 {
+    display: block;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 10, 0.2);
+    margin: 0;
+    font-size: 30px;
+}
