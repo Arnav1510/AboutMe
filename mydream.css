@@ -1,10 +1,13 @@
 body {
-    background: #1A2980;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?colors=0f2027@0,203a43@30,2c5364@65,f7797d@100&gt=l&gd=dbb
+*/
+background: #0F2027;
+background: linear-gradient(180deg, #0F2027 0%, #203A43 30%, #2C5364 65%, #F7797D 100%);
 
     background-attachment: fixed;
-    color: black;  
+    color: rgb(112, 178, 225);  
 }
 h3 {
     color: rgb(145, 244, 244);
@@ -20,7 +23,7 @@ img {
     height: auto;
 }
 .txt:hover {
-    color: lightskyblue;
+    color: rgb(33, 29, 238);
 }
 .txt2:hover {
      color: lightskyblue;
@@ -52,7 +55,7 @@ img {
     flex-wrap: wrap;
 }
 .note {
-    background-color: rgb(19, 19, 197);
+    background-color: transparent;
     width: 250px;
     padding: 20px;
     border-radius: 12px;
