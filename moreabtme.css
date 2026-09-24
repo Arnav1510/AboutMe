@@ -1,7 +1,10 @@
 body {
-  background: #1A2980;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?colors=0f2027@0,203a43@30,2c5364@65,f7797d@100&gt=l&gd=dbb
+*/
+background: #0F2027;
+background: linear-gradient(180deg, #0F2027 0%, #203A43 30%, #2C5364 65%, #F7797D 100%);
     margin: 0;
     color: black;   
 }
@@ -34,6 +37,7 @@ background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, F
     text-align: center;
     box-shadow: 0px 0px 15px rgba(0, 0, 10, 0.2);
     margin: 0;
+    color: rgb(145, 244, 244);
 }
 .notes {
     display: flex;
@@ -42,7 +46,7 @@ background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, F
     flex-wrap: wrap;
 }
 .snote{
-    background-color: rgb(19, 19, 197);
+    background-color: transparent;
     width: 250px;
     max-width: 100%;
     box-sizing: border-box;
