@@ -18,20 +18,13 @@
     flex-wrap: wrap;
 }
 
-
-
-html {
-  min-height: 100%;
-  background-color: #25434B;
-}
-
 body {
-  min-height: 100vh;
-  margin: 0;
-  padding: 10px;
-  box-sizing: border-box;
-  background: linear-gradient(#102A32, #25434B);
+    background-image: url(bcimg3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
+
 p {
     font-size: 20px;
 }
@@ -57,6 +50,8 @@ p {
 
 }
 .tnote1 {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color: rgb(145, 244, 244);
     display: block;
     background-color: transparent;
@@ -77,6 +72,8 @@ p {
     flex-wrap: wrap;
 }
 .note {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     background-color: transparent;
     width: 250px;
     padding: 20px;
@@ -140,6 +137,8 @@ p {
     order: 2;
 }
 .hp {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     background-color: transparent;
     color: aqua;
     font-size: 40px;

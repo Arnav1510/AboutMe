@@ -1,14 +1,8 @@
-html {
-  min-height: 100%;
-  background-color: #25434B;
-}
-
 body {
-  min-height: 100vh;
-  margin: 0;
-  padding: 10px;
-  box-sizing: border-box;
-  background: linear-gradient(#102A32, #25434B);
+    background-image: url(bcimg2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 h3 {
     color: rgb(145, 244, 244);
@@ -23,11 +17,14 @@ img {
     width: min(800px, 100%);
     height: auto;
 }
-.txt:hover {
+.txt {
     color: aqua;
 }
+.txt:hover {
+    color: rgb(0, 110, 255);
+}
 .txt2:hover {
-     color: lightskyblue;
+    color: lightskyblue;
 }
 .txt::after{
     animation: 3s linear 0s infinite running mytxt;
@@ -56,6 +53,8 @@ img {
     flex-wrap: wrap;
 }
 .note {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     background-color: transparent;
     width: 250px;
     padding: 20px;
@@ -79,6 +78,8 @@ img {
     box-shadow: 0px 0px 25px #26D0CE;
 }
 .tnote {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     display: block;
     background-color: transparent;
     width: 100%;
@@ -91,6 +92,8 @@ img {
     margin: 0;
 }
 .bottom-note {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     width: 250px;
 }
 
@@ -103,16 +106,24 @@ img {
 .bottom-note {
     order: 2;
 }
-.bottom-btn {
-    padding-left: 670px;
-    width: 2200px;
+
+.mybutton {
+    width: 250px;
+    padding-left: 20px;
     order: 3;
+    content: "";
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    order: 3;
+
 }
 .hp {
     font-size: 40px;
     background-color: transparent;
     color: aqua;
     border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
 }
 .hp:hover{
     animation: 3s linear 0s infinite running mybtn;
