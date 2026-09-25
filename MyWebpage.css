@@ -47,17 +47,17 @@ button::after{
     color: green;
     background-color: blueviolet;
 }
-body{
-   /*
-* Created with https://www.css-gradient.com
-* Gradient link: https://www.css-gradient.com/?colors=0f2027@0,203a43@30,2c5364@65,f7797d@100&gt=l&gd=dbb
-*/
-background: #0F2027;
-background: linear-gradient(180deg, #0F2027 0%, #203A43 30%, #2C5364 65%, #F7797D 100%);
+html {
+  min-height: 100%;
+  background-color: #25434B;
+}
 
-    color: black;   
-    margin: 0;
-    padding: 10px;
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  background: linear-gradient(#102A32, #25434B);
 }
 p {
     font-size: 20px;
@@ -124,7 +124,7 @@ p {
     padding: 20px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0px 0px 15px rgba(0, 0, 10, 0.2);
+    box-shadow: 0px 0px 15px rgba(171, 171, 218, 0.2);
     margin: 0;
 }
 .notes {
@@ -140,7 +140,7 @@ p {
     padding: 20px;
     border-radius: 12px;
     box-sizing: border-box;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 15px rgba(176, 143, 143, 0.2);
     margin: 0;
     text-align: center;
     transition: transform 1.3s ease, box-shadow 0.3s ease;
@@ -217,11 +217,17 @@ p {
     padding: 20px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0px 0px 15px rgba(0, 0, 10, 0.2);
+    box-shadow: 0px 0px 15px rgba(71, 71, 90, 0.2);
     margin: 0;
     font-size: 30px;
     color: rgb(145, 244, 244);
 }
 .ico{
     border-radius: 2px;
+}
+a {
+ color: aqua;
+}
+a::after{
+    color: blue;
 }

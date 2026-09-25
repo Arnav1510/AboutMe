@@ -1,16 +1,18 @@
+html {
+  min-height: 100%;
+  background-color: #25434B;
+}
+
 body {
-  /*
-* Created with https://www.css-gradient.com
-* Gradient link: https://www.css-gradient.com/?colors=0f2027@0,203a43@30,2c5364@65,f7797d@100&gt=l&gd=dbb
-*/
-background: #0F2027;
-background: linear-gradient(180deg, #0F2027 0%, #203A43 30%, #2C5364 65%, #F7797D 100%);
-    margin: 0;
-    color: black;   
+  min-height: 100vh;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  background: linear-gradient(#102A32, #25434B);
 }
 .cars{
     background-color: black;
-    color: aliceblue;
+    color: aqua;
     border-radius: 12px;
 }
 .cars:hover {
@@ -23,9 +25,15 @@ background: linear-gradient(180deg, #0F2027 0%, #203A43 30%, #2C5364 65%, #F7797
     60%{color: green;}
     80%{color: blue;}
     100%{color: red;}
-    0%{box-shadow: 0px 0px 50px white;}
-    50%{box-shadow: 0px 0px 50px black;}
-    100%{box-shadow: 0px 0px 50px white;}
+    0%{box-shadow: 0px 0px 15px white;}
+    50%{box-shadow: 0px 0px 10px white;}
+    100%{box-shadow: 0px 0px 15px white;}
+}
+@keyframes myhpbtn {
+    
+    0%{box-shadow: 0px 0px 15px white;}
+    50%{box-shadow: 0px 0px 10px white;}
+    100%{box-shadow: 0px 0px 15px white;}
 }
 .n {
     display:block;
@@ -35,12 +43,13 @@ background: linear-gradient(180deg, #0F2027 0%, #203A43 30%, #2C5364 65%, #F7797
     padding: 20px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0px 0px 15px rgba(0, 0, 10, 0.2);
+    box-shadow: 0px 0px 15px rgba(149, 117, 117, 0.406);
     margin: 0;
     color: rgb(145, 244, 244);
 }
 .notes {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
@@ -53,7 +62,7 @@ background: linear-gradient(180deg, #0F2027 0%, #203A43 30%, #2C5364 65%, #F7797
     padding: 20px;
     border-radius: 12px;
 
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 15px rgba(149, 117, 117, 0.406);
     margin: 20px;
 }
 .snote h2 {
@@ -71,4 +80,22 @@ background: linear-gradient(180deg, #0F2027 0%, #203A43 30%, #2C5364 65%, #F7797
 .snote:hover {
     transform: translateY(-10px);
     box-shadow: 0px 0px 25px #26D0CE;
+}
+.hp{
+    background-color: transparent;
+    color: aqua;
+    border-radius: 10px;
+    font-size: 40px;
+}
+.notes::after{
+    content: "";
+    flex-basis: 100%;
+    order: 1;
+}
+.hp:hover {
+    animation: 3s linear 0s infinite running myhpbtn;
+}
+.bottomnote{
+    width: 250px;
+    order: 2;
 }
