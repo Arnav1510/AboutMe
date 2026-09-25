@@ -19,7 +19,7 @@
 }
 
 body {
-    background-image: url(bcimg3.jpg);
+    background-image: url(bcimg2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -50,8 +50,8 @@ p {
 
 }
 .tnote1 {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     color: rgb(145, 244, 244);
     display: block;
     background-color: transparent;
@@ -72,8 +72,8 @@ p {
     flex-wrap: wrap;
 }
 .note {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     background-color: transparent;
     width: 250px;
     padding: 20px;
@@ -137,8 +137,8 @@ p {
     order: 2;
 }
 .hp {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     background-color: transparent;
     color: aqua;
     font-size: 40px;
