@@ -128,3 +128,27 @@ p {
     color:#0ea3a0;
     font-size: 24px;
 }
+.notes::after{
+    content: "";
+    flex-basis: 100%;
+    order: 1;
+}
+.bottom-note {
+    width: 250px;
+    order: 2;
+}
+.hp {
+    background-color: transparent;
+    color: aqua;
+    font-size: 40px;
+    border-radius: 10px;
+}
+.hp:hover{
+    animation: 3s linear 0s infinite running myhpbtn;
+}
+@keyframes myhpbtn {
+    
+    0%{box-shadow: 0px 0px 15px white;}
+    50%{box-shadow: 0px 0px 10px white;}
+    100%{box-shadow: 0px 0px 15px white;}
+}
