@@ -102,3 +102,11 @@ body {
     width: 250px;
     order: 2;
 }
+i {
+    color: aqua;
+    font-size: 6px;
+}
+#myicon1, #myicon2, #myicon3, #myicon4 {
+    color:aqua;
+    font-size: 16px;
+}
