@@ -1,8 +1,9 @@
 body {
-    background-image: url(bcimg2.jpg);
+    background-image: var(--background);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    transition: background 0.2s;
 }
 .cars{
     background-color: black;
@@ -40,9 +41,9 @@ body {
     padding: 20px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0px 0px 15px rgba(149, 117, 117, 0.406);
+    box-shadow: var(--bs);
     margin: 0;
-    color: rgb(145, 244, 244);
+    color: var(--color);
 }
 .notes {
     display: flex;
@@ -62,15 +63,15 @@ body {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 
-    box-shadow: 0px 0px 15px rgba(149, 117, 117, 0.406);
+    box-shadow: var(--bs);
     margin: 20px;
 }
 .snote h2 {
-    color: aqua;
+    color: var(--color);
     margin-top: 0;
 }
 .snote p {
-    color: rgb(145, 244, 244);
+    color: var(--color);
     font-size: 16px;
     line-height: 1.5;
 }
@@ -79,13 +80,13 @@ body {
 }
 .snote:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 0px 25px #26D0CE;
+    box-shadow: var(--bsh);
 }
 .hp{
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     background-color: transparent;
-    color: aqua;
+    color: var(--color);
     border-radius: 10px;
     font-size: 40px;
     font-family: 'Courier New', Courier, monospace;
@@ -103,10 +104,47 @@ body {
     order: 2;
 }
 i {
-    color: aqua;
+    color: var(--color);
     font-size: 6px;
 }
 #myicon1, #myicon2, #myicon3, #myicon4 {
-    color:aqua;
+    color:var(--color);
     font-size: 16px;
+}
+:root {
+    color-scheme: dark;
+    --background: url(bcimg2.jpg);
+    --color: aqua;
+    --bs: 0px 0px 15px rgba(149, 117, 117, 0.406);
+    --bsh: 0px 0px 25px #26D0CE;
+}
+#toggle-theme:checked ~ body {
+    color-scheme: light;
+    --background: url(bcimg3.jpg);
+    --color: black;
+    --bs: 0px 0px 15px rgba(149, 117, 117, 0.406);
+    --bsh: 0px 0px 25px rgba(149, 117, 117, 0.406);
+}
+.toggle-input {
+    position: absolute;
+    opacity: 0;
+}
+.toggle-label {
+    color: var(--color);
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid currentColor;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.toggle-input:focus-visible + .toggle-label {
+    outline: 3px solid #468cff;
+    outline-offset: 3px;
+}
+body:has(#theme-toggle:checked) {
+    --background: url(bcimg3.jpg);
+    --color: black;
+    --bs: 0px 0px 15px rgba(149, 117, 117, 0.406);
+    --bsh: 0px 0px 25px rgba(149, 117, 117, 0.406);
 }

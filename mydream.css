@@ -1,15 +1,15 @@
 body {
-    background-image: url(bcimg2.jpg);
+    background-image: var(--background);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 h3 {
-    color: rgb(145, 244, 244);
+    color: var(--c);
     font-weight: bold;
 }
 a {
-    color: rgb(222, 209, 209);
+    color: var(--c);
 }
 img {
     border: 1px dotted blue;
@@ -18,7 +18,7 @@ img {
     height: auto;
 }
 .txt {
-    color: aqua;
+    color: var(--c);
 }
 .txt:hover {
     color: rgb(0, 110, 255);
@@ -60,13 +60,13 @@ img {
     padding: 20px;
     border-radius: 12px;
     box-sizing: border-box;
-    box-shadow: 0px 0px 15px rgba(163, 145, 145, 0.473);
+    box-shadow: var(--bs);
     margin: 0;
     text-align: center;
     transition: transform 1.3s ease, box-shadow 0.3s ease;
 }
 .note p {
-    color: rgb(145, 244, 244);
+    color: var(--c);
     font-size: 16px;
     line-height: 1.5;
 }
@@ -75,7 +75,7 @@ img {
 }
 .note:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 0px 25px #26D0CE;
+    box-shadow: var(--bsh);
 }
 .tnote {
     backdrop-filter: blur(5px);
@@ -87,8 +87,8 @@ img {
     padding: 20px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0px 0px 15px rgba(199, 199, 222, 0.367);
-    color: aqua;
+    box-shadow: var(--bs);
+    color: var(--c);
     margin: 0;
 }
 .bottom-note {
@@ -120,7 +120,7 @@ img {
 .hp {
     font-size: 40px;
     background-color: transparent;
-    color: aqua;
+    color: var(--c);
     border-radius: 10px;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -131,4 +131,44 @@ img {
     0%{box-shadow: 0px 0px 15px white;}
     50%{box-shadow: 0px 0px 10px white;}
     100%{box-shadow: 0px 0px 15px white;}
+}
+:root {
+    color-scheme: dark;
+    --background: url(bcimg2.jpg);
+    --c: aqua;
+    --bs: 0px 0px 15px rgba(163, 145, 145, 0.473);
+    --bsh: 0px 0px 25px #26D0CE;
+}
+#toggle-theme:checked ~ body {
+    color-scheme: light;
+    ---background: url(bcimg3.jpg);
+    --c: black;
+    --bs: 0px 0px 15px rgba(163, 145, 145, 0.473);
+    --bsh: 0px 0px 25px rgba(163, 145, 145, 0.473);
+}
+.toggle-input {
+    position: absolute;
+    opacity: 0;
+}
+.toggle-label {
+    color: var(--c);
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid currentColor;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.toggle-input:focus-visible + .toggle-label {
+    outline: 3px solid #468cff;
+    outline-offset: 3px;
+}
+body:has(#theme-toggle:checked) {
+    --background: url(bcimg3.jpg);
+    --c: black;
+    --bs: 0px 0px 15px rgba(163, 145, 145, 0.473);
+    --bsh: 0px 0px 25px rgba(163, 145, 145, 0.473);
+}
+body {
+    transition: background 0.2s;
 }

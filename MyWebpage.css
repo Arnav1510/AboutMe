@@ -49,11 +49,12 @@ button::after{
     background-color: blueviolet;
 }
 body {
-    background-image: url(bcimg2.jpg);
+    background-image: var(--background);
     background-repeat: no-repeat;
     
     background-size: cover;
     background-attachment: fixed;
+    transition: background 0.2s;
 }
 p {
     font-size: 20px;
@@ -112,7 +113,7 @@ p {
     }
 }
 .tnote {
-    color: rgb(145, 244, 244);
+    color: var(--color);
     display: block;
     background-color: transparent;
     backdrop-filter: blur(5px);
@@ -122,7 +123,7 @@ p {
     padding: 20px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0px 0px 15px rgba(6, 6, 6, 0.2);
+    box-shadow: var(--shadow1);
     margin: 0;
 }
 .notes {
@@ -138,13 +139,13 @@ p {
     padding: 20px;
     border-radius: 12px;
     box-sizing: border-box;
-    box-shadow: 0px 0px 15px rgba(176, 143, 143, 0.2);
+    box-shadow: var(--shadow1);
     margin: 0;
     text-align: center;
     transition: transform 1.3s ease, box-shadow 0.3s ease;
 }
 .note p {
-    color: rgb(145, 244, 244);
+    color: var(--color);
     font-size: 18px;
     line-height: 1.5;
 }
@@ -153,10 +154,10 @@ p {
 }
 .note:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 0px 25px #26D0CE;
+    box-shadow: var(--shadow2);
 }
 .note .p1 {
-    color: rgb(145, 244, 244);
+    color: var(--color);
     font-size: 28px;
     line-height: 1.5;
     justify-content: center;
@@ -191,11 +192,11 @@ p {
 }
 @keyframes photoGlow {
     0%, 100% {
-        box-shadow: 0 0 10px #26D0CE;
+        box-shadow: var(--img1);
     }
 
     50% {
-        box-shadow: 0 0 30px #26D0CE;
+        box-shadow: var(--img2);
     }
 }
 #proj {
@@ -203,9 +204,10 @@ p {
     border-radius: 12px;
     background-color: black;
     font-family: 'Courier New', Courier, monospace;
+    color: aqua;
 }
 #htag {
-    color:#0ea3a0;
+    color:var(--color);
     font-size: 24px;
 }
 .tnote1 {
@@ -216,16 +218,16 @@ p {
     padding: 20px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0px 0px 15px rgba(71, 71, 90, 0.2);
+    box-shadow: var(--shadow1);
     margin: 0;
     font-size: 30px;
-    color: rgb(145, 244, 244);
+    color: var(--color);
 }
 .ico{
     border-radius: 2px;
 }
 a {
- color: aqua;
+ color: var(--color);
 }
 a::after{
     color: blue;
@@ -233,4 +235,47 @@ a::after{
 #n1 {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+}
+:root {
+    color-scheme: dark;
+    --background: url(bcimg2.jpg);
+    --color: aqua;
+    --shadow1: 0px 0px 15px rgba(176, 143, 143, 0.2);
+    --shadow2: 0px 0px 25px #26D0CE;
+    --img1: 0 0 10px #26D0CE;
+    --img2: 0 0 30px #26D0CE;
+}
+#theme-toggle:checked ~ body {
+    color-scheme: light;
+    --background: url(bcimg3.jpg);
+    --color: black;
+    --shadow1: 0px 0px 15px #121414;
+    --shadow2: 0px 0px 25px #121414;
+    --img1: 0 0 10px #ccff00;
+    --img2: 0 0 30px #ccff00;
+}
+.toggle-input {
+    position: absolute;
+    opacity: 0;
+}
+.toggle-label {
+    color: var(--color);
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid currentColor;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.toggle-input:focus-visible + .toggle-label {
+    outline: 3px solid #468cff;
+    outline-offset: 3px;
+}
+body:has(#theme-toggle:checked) {
+    --background: url(bcimg3.jpg);
+    --color: black;
+    --shadow1: 0px 0px 15px #121414;
+    --shadow2: 0px 0px 25px #121414;
+    --img1: 0 0 10px #ccff00;
+    --img2: 0 0 30px #ccff00;
 }
